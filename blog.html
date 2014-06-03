@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simplifier | Blog</title>
+
+    <script>
+    // Google Fonts Code for Multiple Google Fonts
+    WebFontConfig = {google: { families: [ 
+      'Pacifico','Poiret+One','Marvel','Actor','Chau+Philomene+One','Flamenco' /* Easily Add more Google Fonts Here*/
+      ] }};
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+        '://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+    </script> 
+
+    <!-- style.css, containing all the styles for the entire site,
+    bootstrap, beaverslider and magnific-popup (compiled using sass)-->
+    <link href="stylesheets/styles.css" rel="stylesheet">
+
+    <!-- Modernizier (for ensuring compatibility in older browsers) -->
+    <script src="javascripts/modernizr.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <script src="javascripts/ie8.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+    <!-- Blank Loading Screen with loading.gif when page first loads 
+    ================================================================-->
+    <div id="dvLoading"><img src="images/loading.gif"></div>
+
+    <!-- Begin Navbar 
+    ======================-->
+    <div class="top-head">
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><h1>Simplifier</h1></a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="index.html">Home</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="about.html">Team</a></li>
+                  <li><a href="faq.html">FAQ</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Features <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="feature_elements.html">Elements</a></li>
+                  <li><a href="feature_icons.html">Icons</a></li>
+                  <li><a href="feature_popup.html">Popup</a></li>
+                  <li><a href="feature_columns.html">Columns</a></li>
+                  <li><a href="404.html">404</a></li>
+                </ul>
+              </li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- End Navbar 
+    ===============-->
+
+    <!-- Giant header just below the navigation -->
+    <div class="background-heading-top">
+      <div class="container">
+        <h1 class="heading-top"><span>Blog</span></h1>
+      </div>
+    </div>
+
+    <!-- Blog Container Start 
+    =========================-->
+    <div class="container">
+      <!-- Blog Posts Start 
+      =====================-->
+      <div class="blog col-md-9">
+        <!-- Blog Post #1 
+        ==================-->
+        <div class="post one-element">
+          <div class="col-md-offset-3 col-md-9">
+            <img src="images/plane.jpg">
+          </div>
+          <div class="left-side col-md-3">
+            <div class="col-md-12">
+              <img src="images/daniel.jpg">
+              <p>David Martel</p>
+              <h3>08</h3>
+              <h4>Mar 2014</h4>
+            </div>
+          </div>
+          <div class="content col-md-9">
+            <h1><a href="#">How electronics affect flying.</a></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt, neque eu ultricies pretium, odio est varius sem, nec dapibus ipsum nibh eu nulla. Nam vestibulum et neque in dignissim. Fusce dictum cursus diam, nec ultricies orci sodales a. Phasellus vitae nisl quis ante facilisis porta. Nullam at vehicula ipsum, et condimentum urna. Praesent lobortis erat a tempor aliquam. Etiam vel neque vitae arcu ullamcorper rutrum quis interdum nunc. Morbi ultrices, mi sit amet consequat pulvinar, purus justo placerat neque, nec pulvinar turpis velit at nisl.
+            </p>
+            <ul class="pager">
+              <li><a href="#">Read More...<i class="icomoon-arrow-right-2"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Blog Post #2 
+        ==================-->
+        <div class="post one-element">
+          <div class="col-md-offset-3 col-md-9">
+            <iframe title="YouTube video player" src="http://www.youtube.com/embed/i8pBpCPSHCY" width="480" height="390" frameborder="0"></iframe>
+          </div>
+          <div class="left-side col-md-3">
+            <div class="col-md-12">
+              <img src="images/john.jpg">
+              <p>Michael Pearson</p>
+              <h3>02</h3>
+              <h4>Mar 2014</h4>
+            </div>
+          </div>
+          <div class="content col-md-9"> 
+            <h1><a href="#">Learning to SkyDive</a></h1>
+            <p>In orci turpis, congue nec venenatis vitae, malesuada dictum est. Mauris volutpat tincidunt libero, eu fringilla magna tempor vitae. Donec nisi purus, sollicitudin quis lorem at, aliquam consequat sapien. Curabitur tortor risus, rutrum eu sollicitudin blandit, suscipit id dui. Etiam venenatis vulputate est, tincidunt accumsan magna pulvinar vel.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt, neque eu ultricies pretium, odio est varius sem, nec dapibus ipsum nibh eu nulla. </p>
+            <ul class="pager">
+              <li><a href="#">Read More...<i class="icomoon-arrow-right-2"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Blog Post #3 
+        ==================-->
+        <div class="post one-element">
+          <div class="col-md-offset-3 col-md-9">
+            <img src="images/keyboard.jpg">
+          </div>
+          <div class="left-side col-md-3">
+            <div class="col-md-12">
+              <img src="images/maddie.jpg">
+              <p>Janet Dunn</p>
+              <h3>27</h3>
+              <h4>Feb 2014</h4>
+            </div>
+          </div>
+          <div class="content col-md-9">
+            <h1><a href="#">Dangers of too much screen time.</a></h1>
+            <p>Donec euismod mauris purus, ut rhoncus velit scelerisque quis. Donec vel odio egestas, ultricies est id, vestibulum ligula. Donec pulvinar laoreet nisi malesuada convallis. Donec aliquam faucibus nunc non hendrerit. Vivamus in lacus dolor. Cras varius dapibus ligula id vulputate. Donec sapien orci, egestas sed vehicula id, egestas vitae massa. Mauris eros odio, suscipit sed suscipit quis, fermentum adipiscing lacus. Cras pretium et elit eu posuere.</p>
+            <ul class="pager">
+              <li><a href="#">Read More...<i class="icomoon-arrow-right-2"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Blog Post #4 
+        ==================-->
+        <div class="post one-element">
+          <div class="col-md-offset-3 col-md-9">
+            <div class="quote">
+              <h2><a href="#">“All the electronic devices are powered by white smoke. When smoke goes out, device is dead.” </a></h2>
+              <h3>- Milan Nikolic</h3>
+            </div>
+          </div>
+          <div class="left-side col-md-3">
+            <div class="col-md-12">
+              <img src="images/robert.jpg">
+              <p>Richie Taylor</p>
+              <h3>20</h3>
+              <h4>Feb 2014</h4>
+            </div>
+          </div>
+          <div class="content col-md-9">
+            <h1><a href="#">A quote by Milan Nikolic</a></h1>
+            <p>Aenean malesuada libero sit amet nibh pulvinar, vel ultrices mauris varius. Nulla fermentum mauris vel risus mollis, a volutpat massa cursus. Sed cursus dolor ac pharetra venenatis. Proin volutpat urna eget ultrices tincidunt. Suspendisse non leo nisl. Mauris varius ultricies nibh, nec sodales nisl pharetra eget. Fusce et tortor ipsum. Phasellus ornare non orci ornare fermentum. Sed dapibus mi turpis, vel cursus enim lobortis id. Pellentesque placerat sit amet sem tincidunt semper.</p>
+            <ul class="pager">
+              <li><a href="#">Read More...<i class="icomoon-arrow-right-2"></i></a></li>
+            </ul>
+            <!-- Pagination Option Bar -->
+            <ul class="pagination">
+              <li><a href="#">&laquo;</a></li>
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">&raquo;</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Blog Posts End 
+      =====================-->
+
+      <!-- Blog Sidebar Start 
+      =======================-->
+      <div class="sidebar col-md-3">
+        <!-- Blog-widget #1 -->
+        <div class="blog-widget">
+          <h2>Search</h2>
+          <form role="search">
+            <div class="right-inner-addon">
+              <i class="icomoon-search-2"></i>
+              <input type="text" class="search-side" placeholder="Search">    
+            </div>
+          </form>
+        </div>
+        <!-- Blog-widget #2 -->
+        <div class="blog-widget">
+          <h2>Categories</h2>
+          <ul class="nav nav-tabs blog-side-nav">
+            <li><a href="#">News</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Opportunities</a></li>
+            <li><a href="#">Video Advertising</a></li>
+          </ul>
+        </div>
+        <!-- Blog-widget #3 -->
+        <div class="blog-widget">
+          <h2>Text Widget</h2>
+          <p>
+            In orci turpis, congue nec venenatis vitae, malesuada dictum est. Mauris volutpat tincidunt libero, eu fringilla magna tempor vitae. Donec nisi purus, sollicitudin quis lorem at, aliquam.
+          </p>
+        </div>
+        <!-- Blog-widget #4 -->
+        <div class="blog-widget">
+          <h2>Recent Posts</h2>
+          <h3><a href="#">How electronics affect flying</a></h3>
+          <h4>Posted by David Martel</h4>
+          <h3><a href="#">Learning to SkyDive</a></h3>
+          <h4>Posted by Michael Pearson</h4>
+          <h3><a href="#">Dangers of too much screen time</a></h3>
+          <h4>Posted by Janet Dunn</h4>
+          <h3><a href="#">A quote by Milan Nikolic</a></h3>
+          <h4>Posted by Richie Taylor</h4>
+        </div>
+      </div>
+      <!-- Blog Sidebar Start 
+      =======================-->
+    </div>
+    <!-- Blog Container End 
+    =======================-->
+
+    <!-- Footer Start
+    ================== -->
+    <div class="footer">
+      <div class="container">
+        <!-- Footer Column 1 -->
+        <div class="col-md-4 col-xs-12">
+          <h1><i class="head icomoon-info-2"></i></span> About Simplifier.</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+        </div>
+        <!-- Footer Column 2 -->
+        <div class="col-md-4 col-xs-12">
+          <h1><i class="head icomoon-bubble-10"></i> Connect.</h1>
+          <p class="twitter"><strong>@ Quisque</strong> quis dolor eget libero bibendum aliquam at at diam. Integer consectetur luctus interdum. Nam imperdiet elementum rutrum.</p>
+          <div class="social-icons">
+              <a href="#" class="facebook"><i class="icomoon-facebook"></i></a>
+              <a href="#" class="twitter"><i class="icomoon-twitter"></i></a>
+              <a href="#" class="google"><i class="icomoon-google-plus"></i></a>
+              <a href="#" class="youtube"><i class="icomoon-youtube"></i></a>
+              <a href="#" class="tumblr"><i class="icomoon-tumblr-2"></i></a>
+              <a href="#" class="linkedin"><i class="icomoon-linkedin"></i></a>
+              <a href="#" class="pinterest"><i class="icomoon-pinterest"></i></a>
+          </div>
+        </div>
+        <!-- Footer Column 3 -->
+        <div class="col-md-4 col-xs-12"> 
+          <h1><i class="head icomoon-location"></i> Contact Us.</h1>
+          <i class="icon icomoon-office left"></i>
+          <p class="location">1234 Main Street, Anytown, CA</p>
+          <i class="icon icomoon-mail left"></i>
+          <p class="email"> info@example.com</p>
+          <i class="icon icomoon-mobile left"></i>
+          <p class="location"> 1-800-123-4567</p>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End 
+    =================-->
+
+    <!-- End Document 
+    =================-->
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="javascripts/jquery-1.11.0.min.js"></script>
+    <!-- Waypoints, for animating at the right time -->
+    <script src="javascripts/waypoints.min.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <script src="javascripts/main.js"></script>
+  </body>
+</html>

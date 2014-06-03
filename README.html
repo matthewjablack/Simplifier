@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simplifier | README</title>
+
+    <script>
+    // Google Fonts Code for Multiple Google Fonts
+    WebFontConfig = {google: { families: [ 
+      'Pacifico','Poiret+One','Marvel','Actor','Chau+Philomene+One','Flamenco' /* Easily Add more Google Fonts Here*/
+      ] }};
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+        '://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+    </script> 
+
+    <!-- style.css, containing all the styles for the entire site,
+    bootstrap, beaverslider and magnific-popup (compiled using sass)-->
+    <link href="stylesheets/styles.css" rel="stylesheet">
+
+    <!-- Modernizier (for ensuring compatibility in older browsers) -->
+    <script src="javascripts/modernizr.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+    <!-- Blank Loading Screen with loading.gif when page first loads 
+    ================================================================-->
+    <div id="dvLoading"><img src="images/loading.gif"></div>
+
+    <!-- Begin Navbar 
+    ======================-->
+    <div class="top-head">
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><h1>Simplifier</h1></a>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="index.html">Home</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="about.html">Team</a></li>
+                  <li><a href="faq.html">FAQ</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Features <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="feature_elements.html">Elements</a></li>
+                  <li><a href="feature_icons.html">Icons</a></li>
+                  <li><a href="feature_popup.html">Popup</a></li>
+                  <li><a href="feature_columns.html">Columns</a></li>
+                  <li><a href="404.html">404</a></li>
+                </ul>
+              </li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- End Navbar 
+    ===============-->
+
+    <!-- Giant header just below the navigation -->
+    <div class="background-heading-top">
+      <div class="container">
+        <h1 class="heading-top"><span>Documentation</span></h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1 class="sm-headline"><span>“Simplifier” Documentation by “Matt Black” v1.0</span></h1>
+      <div class="col-md-3 col-md-offset-1">
+        <p><strong>Created</strong>: <i>21/03/2014</i><br>
+        <strong>By</strong>: <i>Matt Black</i><br>
+        <strong>Email</strong>: <i><a href="mailto:info@mattblackdesign.com">info@mattblackdesign.com</a></i></p>
+      </div>
+
+      <div class="col-md-7">
+        <p>Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form here. Thanks so much!</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="col-md-10 col-md-offset-1">
+        <h2><i>Table of Contents</i></h2>
+        <div class="col-md-12">
+          <p>A. <a href="#htmlstructure">HTML Structure</a></p>
+          <p>B. <a href="#sassfiles">SASS Files and Structure</a><p>
+          <p>C. <a href="#javascript">Javascript</a><p>
+          <p>D. <a href="#credit">Sources and Credit</a><p>
+        </div>
+        <div id="htmlstructure" class="col-md-12">
+          <h1 class="sm-headline"><span>A) HTML Structure</span></h1>
+
+          <p>This theme is built in HTML5, and uses the Bootstrap 3.0 Framework. Each page has essentially the same head, as well as navigation and heading (apart from the home page which has a Slider). </p><br>
+
+          <a href="documentation_img/navigation.jpg">
+            <img width="100%" src="documentation_img/navigation.jpg" class="bottom-space">
+          </a>
+
+          <p>Every element between the navigation, and the footer, is contained within a <code>&lt;div&gt;</code> with the class "container".</p>
+
+          <pre>&lt;div class="container"&gt;<br>&lt;-- Content --&gt;<br>&lt;/div&gt;</pre>
+
+          <p>Everything must be placed inside <code>.container</code> (fixed width) or <code>.container-fluid</code> (full width) for the Bootstrap Grid system to work properly (This includes the Navigation, and the Footer). </p>
+
+          <p>You can read more about grid layouts and how to create rows and columns on the Bootstrap 3.0 Documentation Page at <a href="http://getbootstrap.com/css/#grid">http://getbootstrap.com/css/#grid</a></p>
+        </div>
+
+        <div id="sassfiles" class="col-md-12">
+          <h1 class="sm-headline"><span>B) SASS Files and Structure</span></h1>
+
+          <p>This theme is styled in SASS (using <code>.scss</code> files) and includes many, many files that are compiled into one <code>.css</code> file. These <code>.scss</code> files include: Bootstrap components, Bootstrap Variables, CSS Animation, Beaver Slider, IcoMoon, Magnific Popup, and the custom main <code>.scss</code> file.</p>
+
+          <p>In order to compile these SASS files, you will first need <a href="https://www.ruby-lang.org/en/downloads/">Ruby</a> and then you will need to install the <a href="http://compass-style.org/install/">Compass</a> gem. </p>
+
+          <p class="bottom-space">You can them simply open the project directory in terminal, and run <code>compass watch</code>. I find this to be the easiest way to compile, since it detects when a change has been made to a <code>.scss</code> file, without having to run a command every time I want to make a change. </p>
+
+          <p>Inside the "sass" folder there is a "bootstrap" folder. I have left this untouched, in case you need to update to a newer version of Bootstrap in the future. This folder contains all the bootstrap elements. </p>
+
+          <p><strong>Bootstrap Elements</strong> Supported in this Theme Include:</p>
+          <ul class="small-list">
+            <li>Dropdowns</li>
+            <li>Tabs</li>
+            <li>Navbar</li>
+            <li>Pagination</li>
+            <li>Pager</li>
+            <li>Code</li>
+            <li>Labels</li>
+            <li>Alerts</li>
+            <li>Progress Bars</li>
+            <li>Accordion/Collapse</li>
+          </ul>
+          <p class="bottom-space">Have a look at the <a href="http://getbootstrap.com/components/">Bootstrap 3.0</a> Docs to learn how to use them.</p>
+
+          <p>Inside the "sass" folder there are also several other <code>.scss</code> files. </p>
+          <p><strong>animate.scss</strong> was derived from "animate.css" (simply converted to <code>.scss</code>)</p>
+          <p>In order to use these animations, simply add the following code to any element.</p>
+          <pre>&lt;div class="animated" data-animation="fadeIn"&gt;<br>&lt;-- Content Here --&gt;<br>&lt;/div&gt;</pre>
+          <p>Replace "fadeIn" with any animations found on the <a href="http://daneden.github.io/animate.css/">animate.css</a> docs.</p>
+          <p><strong>beaverslider.scss</strong> contains styling for all possible elements for the "Beaver Slider". You can check out these elements at <a href="http://beaverslider.com">beaverslider.com</a></p>
+          <p>As seen on the home page, the slider is added by using one line of code, and can be customized in the <code>beaverslider-settings.js</code></p>
+          <pre>&lt;div id="top-slider"&gt;&lt;/div&gt;</pre>
+          <p><strong>icomoon.scss</strong> was generated by <a href="http://icomoon.io">IcoMoon.io</a> and converted to SASS.</p>
+          <p>You can use any Icon found on the <a href="feature_icons.html">Icons</a> page.</p>
+          <p>For example <code>&lt;i class="icomoon-home"&gt;&lt;/i&gt;</code> generates &nbsp;&nbsp;<i class="icomoon-home"></i></p>
+          <p><strong>magnific-popup.scss</strong> can be found on the magnific popup <a href="https://github.com/dimsemenov/Magnific-Popup">github</a> page.</p>
+          <p>It contains all styling for any popups featured in the <code>magnific-settings.js</code> file in the "javascripts" folder.</p>
+          <p><strong>main.scss</strong> includes all the styling for this theme.</p>
+          <p>It includes custom mixins at the top, followed by theme html elements, headings and classes.</p>
+          <p class="bottom-space"><strong>variables.scss</strong> includes all the SASS variables for the Theme, Bootstrap, as well as Magnific Popup. This allows for easy changes to styled elements.</p>
+
+          <p><strong>Customizing Theme for your own use:</strong></p>
+          <p>It is very easy to customize Simplifier for your own use. If you simply look in the <code>variables.scss</code> file, you will see all the Bootstrap variables that you can edit, as well as some custom ones that I've added.</p>
+          <p><strong>For example</strong>, under variable options, you will see 
+            <pre>///////////////////<br>// Theme options //<br>///////////////////</pre>
+          </p>
+          <p>
+          Currently, the regular "Black Theme" is uncommented. I have provided two alternatives (Navy Theme, and Green Theme), which you can use by commenting out the Black Theme, and uncommenting one of the other themes. 
+          </p>
+          <p class="bottom-space">One thing to note, if you look at the bottom of the <code>variables.scss</code> you will see all the <strong>SASS</strong> settings for <strong>Magnific Popup</strong></p>
+
+          <p><strong>From Development to Production</strong></p>
+          <p>When moving your project from development to production, there are some files that will not be neccesary on the web, that are neccesary for SASS.</p>
+          <p>These files include:</p>
+          <ul class="small-list">
+            <li>.sass-cache (folder)</li>
+            <li>sass (folder)</li>
+            <li>config.rb (file)</li>
+          </ul>
+          <p>Do not include these files in your Production folder</p>
+        </div>
+
+        <div id="javascript" class="col-md-12">
+          <h1 class="sm-headline"><span>C) Javascript</span></h1>
+
+          <p><strong>This theme imports several Javascript Files</strong></p>
+
+          <p>Every page in the theme includes the following JS files:</p>
+          <ul class="small-list">
+            <li>jQuery</li>
+            <li>jQuery-Waypoints</li>
+            <li>Bootstrap</li>
+            <li>Main Custom JS File</li>
+          </ul>
+          <p>Extra JS files included on the home page:</p>
+          <ul class="small-list">
+            <li>Beaver Slider</li>
+            <li>Beaver Slider Effects</li>
+            <li>Beaver Slider Settings</li>
+            <li>Magnific Popup</li>
+            <li>Magnific Popup Settings</li>
+          </ul>
+          <p>Every page on the theme does not include these scripts, as they take longer to load, and are not essential on every page. If you wish to use <strong>Beaver Slider</strong> or <strong>Magnific Popup</strong> on any pages other than the home page, you can simply add them to the bottom of the body (for example, as done in the <a href="feature_popup.html">Popups</a> page).</p>
+          <a href="documentation_img/js-sources.jpg"><img width="70%" src="documentation_img/js-sources.jpg"></a>
+          <p>&nbsp;</p>
+          <p>If you would like to add your own custom JS, you can do so in the <code>main.js</code> file, under the <code>$(document).ready(function(){</code></p>
+        </div>
+
+        <div id="credit" class="col-md-12">
+          <h1 class="sm-headline"><span>D) Sources and Credits</span></h1>
+
+          <p>I've used the following <strong>images</strong>, <strong>icons</strong> and <strong>other files</strong> as listed.</p>
+          <ul class="small-list bottom-space">
+            <li>Bootstrap 3.0 by <a href="https://github.com/twbs/">Twitter Bootstrap</a> (inside /sass/bootstrap , javascripts/bootstrap.min.js and stylesheets/fonts/bootstrap)</li>
+            <li>jQuery by <a href="https://github.com/jquery">Dave Methvin and Team</a> (used as javascripts/jquery.js)</li>
+            <li>jQuery-Waypoints by <a href="https://github.com/imakewebthings/">Caleb Troughton</a> (as seen in javascripts/waypoints.min.js)</li>
+            <li>Animate.css by <a href="https://github.com/daneden">Daniel Eden</a> (as seen in /sass/animate.scss)</li>
+            <li>Beaver Slider 2.0 by <a href="https://github.com/beaverslider/">Beaverslider</a> (used in /javascripts/beaverslider.js and /javascripts/beaverslider-effects.js)</li>
+            <li>IcoMoon by <a href="http://icomoon.io/">IcoMoon.io</a> (used in /stylesheets/fonts as icomoon.eot,.svg,.ttf andf .woff)</li>
+            <li>Magnific Popup by <a href="https://github.com/dimsemenov">Dmitry Semenov</a> (which includes /sass/bootstrap/magnific-popup.scss and /javascripts/magnific-popup.min.js)</li>
+            <li>Modernizr by <a href="https://github.com/Modernizr/">Faruk Ateş</a> (used as /javascripts/modernizr.js)</li>
+            <li>Loading.gif by <a href="http://www.ajaxload.info">ajaxload.info </a> (found in images/loading.gif)</li> 
+            <li>MacBook Pro Retina Psd Mockup by <a href="http://www.pixeden.com">Pixeden.com</a> (as seen in images/macbook_pro.png and images/macbook_pro2.png)</li>
+            <li>Free Stock Photos by <a href="http://freerangestock.com/">FreeRangeStock.com</a> (includes all files in the images folder other than loading.gif, macbook_pro.png and macbook_pro2.png)</li>
+            <li>Knuckles by <a href="http://vimeo.com/12235444">Paul Bryan</a> (on Vimeo)</li>
+            <li>Learning to SkyDive by <a href="https://www.youtube.com/user/SkydiveJurienBay">Skydive Jurien Bay</a> (on Youtube)</li>
+            <li>Keep it simple by <a href="https://www.youtube.com/user/YaBoyYoungRo">Ro Shon</a> (on Youtube)</li>
+          </ul>
+
+          <p class="bottom-space"><strong>Once again</strong>, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme.  If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>
+          <p><i>Matt Black</i></p>
+        </div>
+      </div>
+      
+    </div>
+
+
+    <!-- Footer Start
+    ================== -->
+    <div class="footer">
+      <div class="container">
+        <!-- Footer Column 1 -->
+        <div class="col-md-4 col-xs-12">
+          <h1><i class="head icomoon-info-2"></i></span> About Simplifier.</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+        </div>
+        <!-- Footer Column 2 -->
+        <div class="col-md-4 col-xs-12">
+          <h1><i class="head icomoon-bubble-10"></i> Connect.</h1>
+          <p class="twitter"><strong>@ Quisque</strong> quis dolor eget libero bibendum aliquam at at diam. Integer consectetur luctus interdum. Nam imperdiet elementum rutrum.</p>
+          <div class="social-icons">
+              <a href="#" class="facebook"><i class="icomoon-facebook"></i></a>
+              <a href="#" class="twitter"><i class="icomoon-twitter"></i></a>
+              <a href="#" class="google"><i class="icomoon-google-plus"></i></a>
+              <a href="#" class="youtube"><i class="icomoon-youtube"></i></a>
+              <a href="#" class="tumblr"><i class="icomoon-tumblr-2"></i></a>
+              <a href="#" class="linkedin"><i class="icomoon-linkedin"></i></a>
+              <a href="#" class="pinterest"><i class="icomoon-pinterest"></i></a>
+          </div>
+        </div>
+        <!-- Footer Column 3 -->
+        <div class="col-md-4 col-xs-12"> 
+          <h1><i class="head icomoon-location"></i> Contact Us.</h1>
+          <i class="icon icomoon-office left"></i>
+          <p class="location">1234 Main Street, Anytown, CA</p>
+          <i class="icon icomoon-mail left"></i>
+          <p class="email"> info@example.com</p>
+          <i class="icon icomoon-mobile left"></i>
+          <p class="location"> 1-800-123-4567</p>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End 
+    =================-->
+
+    <!-- End Document 
+    =================-->
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="javascripts/jquery-1.11.0.min.js"></script>
+    <!-- Waypoints, for animating at the right time -->
+    <script src="javascripts/waypoints.min.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <script src="javascripts/main.js"></script>
+  </body>
+</html>

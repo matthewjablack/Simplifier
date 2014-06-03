@@ -1,0 +1,1227 @@
+//
+// Custom Mixins
+//
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+@mixin background-size($sizing) {
+  -webkit-background-size: $sizing;
+  -moz-background-size: $sizing;
+  -ms-background-size: $sizing;
+  -o-background-size: $sizing;
+  background-size: $sizing;
+}
+//
+//Styles
+//
+a {
+  text-decoration: none;
+  color: #fff;
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+//
+//  $link-hover  can be found in _variables.scss
+//
+.theme-hover{
+  a{
+    color:#000;
+    @include transition(.3s);
+    &:hover{
+      color:$link-hover !important;
+    }
+  }
+}
+//
+// Default colors for headings
+//
+h1{
+  @extend .theme-hover;
+}
+h2{
+  font-size:35px;
+  font-family:"Marvel";
+  font-weight:bold;
+  @extend .theme-hover;
+}
+h3{
+  @extend .theme-hover;
+}
+p{
+  font-family:"Marvel";
+  color:#333;
+  font-size:18px;
+  @extend .theme-hover;
+  a{
+    text-decoration:underline;
+    &:hover{
+      text-decoration:underline;
+    }
+  }
+}
+strong{
+  color:$strong-color;
+}
+.colored-text{
+  color:$bright-orange !important;
+}
+.old-text{
+  font-family:"Times New Roman",Georgia,Serif;
+}
+
+//
+// Default elements
+//
+::selection {
+  background: #e4744f; /* Safari */
+  color:#fff;
+}
+::-moz-selection {
+  background: #e4744f; /* Firefox */
+  color:#fff;
+}
+// Float Element to the Left
+.left {
+  float:left !important;
+}
+// Float Element to the Right
+.right {
+  float:right !important;
+}
+// Ensure element isn't too close to the top
+.top-space{
+  margin-top:50px;
+}
+// Ensure element isn't too close to the
+// element below it
+.bottom-space{
+  margin-bottom:50px;
+}
+.white {
+  color: #fff;
+  a {
+    color: #fff;
+  }
+  i{
+    color:#fff;
+  }
+  h4{
+    color:#fff;
+  }
+  p{
+    color:#fff;
+  }
+}
+.invisible{
+  visibility: hidden;
+}
+// Class for correct timing
+// of animate.scss
+.animated {
+  visibility: hidden;
+}
+.animated.visible{
+  visibility:visible;
+}
+//
+// Setup theme heading with linethrough
+//
+// Small Headline
+//
+.sm-headline{
+  padding-top:10px;
+  font-size:28px;
+  font-family:"Poiret One";
+  text-align:center;
+  margin-bottom:-15px;
+  position: relative;
+  margin-top: 20px;
+  padding-bottom:50px;
+  color:$gray-dark !important;
+  &:before {
+    content: "";
+    display: block;
+    border-top: solid 1px $gray-dark;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 30%;
+    z-index: 1;
+  }
+  span {
+    background: #e4e8ea;
+    padding: 0 20px;
+    position: relative;
+    z-index: 5;
+  }
+}
+//
+// Medium Headline
+//
+.md-headline{
+  @extend .sm-headline;
+  font-size:37px !important; 
+}
+//
+// Large Headline
+//
+.lg-headline{
+  @extend .sm-headline;
+  font-size:50px !important;
+}
+//
+// Small text below headline
+//
+.headline-center{
+  padding-top:10px;
+  font-size:16px;
+  font-family:"Marvel";
+  text-align:center;
+  margin-bottom:-15px;
+  position: relative;
+  margin-top: -50px;
+  padding-bottom:50px;
+  color:$strong-color !important;
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 30%;
+    z-index: 1;
+  }
+  span {
+    background: #e4e8ea;
+    padding: 0 20px;
+    position: relative;
+    z-index: 10;
+  }
+}
+//
+// Giant header just below navigation
+//
+.heading-top{
+  font-size:4em;
+  margin-top:110px;
+  margin-bottom:25px;
+  font-family:"Poiret One";
+  padding-bottom:0px;
+  color:#fff;
+  text-shadow : 3px 3px 8px silver;
+  text-align:center;
+}
+// Grey background behind .heading-top
+.background-heading-top{
+  // background:#666;
+  background:$bg-heading-top;
+}
+// Opaque black surrounding navbar
+.top-head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $navbar-bg-color;
+  background: $navbar-bg-color-opaque;
+  padding: 20px 0 -5px 0;
+  z-index: 9999;
+  @media (max-width: $grid-float-breakpoint-max) {
+    background:rgba(0,0,0,0.8);
+  }
+}
+// Simplifier logo ID
+#logo{
+  font-size:2em;
+  font-family:"Pacifico";
+}
+// Custom changes to the default 
+// Bootstrap Navbar
+.navbar {
+  padding-top:10px;
+  padding-bottom:0px;
+  position: relative;
+  z-index: 9999;
+  font-family: "GeosansLight";
+
+  h1 {
+    padding:0;
+    margin:0;
+    line-height:35px;
+    font-size:2.2em;
+    font-family:"Pacifico";
+    color:white;
+    margin-top:-10px;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    float:right;
+    li{
+      display:inline;
+
+      a{
+        position: relative;
+        font-size: 1.7em;
+        display: inline-block;
+        background: none;
+        color: white;
+        line-height: normal;
+        padding: 10px 25px 10px;
+        margin-top:5px;
+        @include border-radius(40px);
+        @include transition(all 0.2s ease-in);
+        &:hover{
+          color:black;
+          background: white;
+          background: rgba(255, 255, 255, 0.9);
+          text-decoration: none;
+        }
+      }
+
+    }
+  }
+  @media (min-width: $grid-float-breakpoint) and (max-width: $screen-md) {
+    ul{
+      li{
+
+        a{
+          margin-top:10px;
+          font-size:1.6em;
+          padding:5px 12px 5px;
+        }
+      }
+    }
+  }
+  @media (max-width: $grid-float-breakpoint-max) {
+    ul{
+      margin-top:10px;
+      float:left;
+      li{
+        display:list-item;
+        a{
+          font-size:1.7em;
+          padding:10px 25px 10px;
+          float:left;
+          color:#fff !important;
+          &:hover{
+            color:#000 !important;
+          }
+        }
+      }
+    }
+  } 
+}
+// Slight changes to Navbar Dropdown
+.navbar-nav > li > .dropdown-menu {
+  font-size:0.8em;
+  > li{
+    >a{
+      margin-top:0;
+      font-size:1.9em;  
+    }
+  }
+}
+// Custom changes to the default 
+// Bootstrap Nav Tabs
+.nav-tabs{
+  > li{
+    > a{
+      padding:15px 32px;
+      font-family:"Poiret One";
+      font-size:20px;
+      background:#ccc;
+      color:#000;
+      @include border-radius($nav-tabs-border-radius $nav-tabs-border-radius 0 0);
+      &:hover{
+        color:#fff;
+        background:$light-theme-main;
+      }
+    }
+  }
+  @media (min-width: $grid-float-breakpoint) and (max-width: $screen-md) {
+    > li{
+      > a{
+        padding:10px 15px;
+        font-size:18px;
+      }
+    }
+  }
+  @media (max-width: $grid-float-breakpoint-max) {
+    border-bottom: 0;
+    > li{
+      width:100%;
+      display:list-item;
+      clear:left;
+      > a{
+        padding:10px 14px ;
+        border:1px solid #e5e5e5;
+        @include border-radius(0);
+        font-size:18px;
+      }
+      &:first-child > a {
+        @include border-radius(4px 4px 0 0);
+      }
+      &:last-child > a {
+        @include border-radius(0 0 4px 4px);
+      }
+      > a:hover {
+        z-index: 2;
+        border-color: #666;
+      }
+    }
+  }
+}
+// Custom Bootstrap Pager for Theme
+.pager{
+  font-family:"Poiret One";
+  font-size:17px !important;
+  float:left !important;
+  margin-top:0 !important;
+  padding-top: 0 !important;
+  i{
+    font-size:12px !important;
+    padding-left:4px;
+    line-height:12px !important;
+    margin-left:0 !important;
+    color:$body-bg !important;
+    @include transition(.5s);
+  }
+  li{
+    >a,
+    > span {
+      padding:5px 10px !important;
+      @include transition(.5s);
+
+    }
+    > a:hover,
+    > a:focus{
+      color:#000 !important;
+      border:1px solid $theme-active !important;
+      background:$body-bg !important;
+      i{
+        color:#000 !important;
+      }
+    }
+  } 
+}
+// Larger Custom Pager
+.pager-2{
+  @extend .pager;
+  margin-top:20px !important;
+  a{
+    font-size:23px;
+    color:#fff !important;
+    &:hover{
+      color:#000 !important;
+    }
+  }
+  i{
+    font-size:19px !important;
+  }
+}
+// Custom Bootstrap Pagination for theme
+.pagination{
+  display:block !important;
+  margin-top:50px;
+  clear:both !important;
+  padding-top:20px;
+  > li {
+    > a,
+    > span {
+      @include transition(.5s);
+    }
+  }
+  @media (max-width: $screen-md) {
+    padding-top:10px;
+    padding-bottom:25px; 
+  }
+}
+//
+// Custom Textarea/input forms for Theme
+//
+textarea:focus, 
+input[type="text"]:focus, 
+input[type="password"]:focus, 
+input[type="datetime"]:focus, 
+input[type="datetime-local"]:focus, 
+input[type="date"]:focus, 
+input[type="month"]:focus, 
+input[type="time"]:focus, 
+input[type="week"]:focus, 
+input[type="number"]:focus, 
+input[type="email"]:focus, 
+input[type="url"]:focus, 
+input[type="search"]:focus, 
+input[type="tel"]:focus, 
+input[type="color"]:focus, 
+.uneditable-input:focus {   
+  border-color: $strong-color !important;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(51, 51, 51, 0.6);
+  outline: 0 none;
+}
+// Featured Glyphicons Widget on Home Page
+.glyphicon-centered {
+  margin-top:75px;
+  text-align:center;
+  font-size:50px;
+  i{
+    color:$gray-darker !important;
+  }
+  h1 {
+    font-family:"Poiret One";
+    font-style: normal;
+    color:#3d4040;
+    font-size:28px;
+    margin-top:-5px; 
+  }
+  p {
+    font-family:"Marvel";
+    font-style: normal;
+    color:#3d4040;
+    font-size:22px;
+    line-height:28px;
+  }
+}
+// Slight changes to Nav Tabs Content
+.tab-content{
+  padding:20px;
+  i{
+    color:#000;
+  }
+  h4{
+    color:#000;
+  }
+}
+// Class for Nav Tab Pane
+.media-list{
+  margin-top:10px;
+  i{
+    font-size:50px;
+    padding-right:20px;
+    color:$theme-active;
+  }
+  h4{
+    font-size:22px;
+    font-weight:bold;
+    font-family:"Marvel";
+    color:$theme-active;
+  }
+  p{
+    font-size:19px;
+    font-family:"Marvel";
+  }
+}
+// Custom Settings for Small List
+.small-list{
+  li{
+    font-family:"Marvel";
+    color:#333;
+    font-size:17px;
+    a{
+      text-decoration: underline;
+      color:#000;
+      @include transition(.3s);
+      &:hover{
+        color:$link-hover !important;
+      }
+    }
+  }
+}
+// Blue bar with white text, and Icon highlights
+.colored-info{
+  margin-top:50px;
+  background:#547ffc;
+  padding:20px;
+  color:#fff !important;
+  h1{
+    color:#fff;
+    font-family:"Chau Philomene One";
+    padding-bottom:30px;
+  }
+  p{
+    color:#fff;
+  }
+  h4{
+    color:#fff;
+  }
+  h5{
+    padding:30px;
+    font-family:"Flamenco";
+    font-size:30px;
+    color:#fff;
+  }
+  h6{
+    margin-top:-15px;
+    font-family:"Chau Philomene One";
+    font-size:20px;
+    float:right;
+    color:#fff;
+  }
+  i{
+    color:#fff;
+  }
+}
+// 2 Column Infobar with Modal Trigger, and Feature List with Icons
+.infobar{
+  @extend .glyphicon-centered;
+  text-align:left;
+  h2{
+    font-family:"Poiret One";
+    font-size:35px;
+    margin-top:12px;
+    margin-bottom:25px;
+  }
+  h3{
+    font-family:"Marvel";
+    padding-left:60px;
+    font-size:19px;
+    margin-top:10px;
+  }
+  p{
+    font-family:"Marvel";
+    padding-left:60px;
+    font-size:19px;
+    margin-top:-10px;
+  }
+  i{
+    font-size:20px;
+    line-heighst:16px;
+    display:inline;
+    float:left;
+    font-size:35px;
+    margin:20px 10px 0 3px;
+    color:black !important;
+  }
+  img{
+    width:100%;
+  }
+  .modal-trigger{
+    a {
+    position: relative;
+    display: inline-block;
+    width:100%;
+      img {
+        width:100%;
+      }
+      i {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+        color: #fff !important;
+        text-align: center;
+        opacity:0.6;
+        font-size: 100px;
+        padding-top:23%;
+        @include transition(.7s);
+      }
+    }
+    a:hover{
+      i{
+        opacity:1;
+      }
+    }
+  }
+}
+// Info widget, with heading, text and side icon
+.info-widget{
+  margin-top:25px;
+  i{
+    line-height:80px;
+    font-size:50px;
+    color:$strong-color;
+  }
+  p{
+    font-family:"Marvel";
+    font-size:18px;
+  }
+  @media (max-width: $grid-float-breakpoint-max) {
+    i{
+      margin-left:-20px;
+    }
+  }
+}
+// Class for gallery images and thumbnails
+.gallery-img{
+  margin-top:15px;
+  margin-bottom:15px;
+
+  a {
+    position: relative;
+    display: inline-block;
+    img {
+      width:100%;
+    }
+    i {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0;
+      background: black;
+      color: #fff;
+      opacity: 0;
+      text-align: center;
+      font-size: 40px;
+      padding-top:30%;
+      @include transition(.8s);
+    }
+    &:hover i {
+      opacity: 0.8;
+    }
+    @media (max-width: $grid-float-breakpoint-max) {
+      width:100%;
+    }
+  }
+}
+//
+// Staff showcase class (as seen on about page)
+//
+.staff {
+  text-align: center;
+  padding: 20px 15px;
+  background-color: $theme-active;
+  margin-bottom: 30px;
+  @include box-sizing(border-box);
+  @include border-radius(5px);
+  p{
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:#ccc;
+    font-size:15px;
+  }
+  .staff-image {
+    @include border-radius(100%);
+    border: 2px solid white;
+  }
+  .staff-name {
+    font-family: 'Marvel', serif;
+    text-shadow : 3px 3px 8px silver;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .staff-title {
+    font-family:  serif;
+    font-style: italic;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 15px;
+  }
+  .staff-social {
+    font-family:$font-family-sans-serif;
+    margin: 0;
+    a {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 12px;
+      padding: 0 5px 0 3px;
+      border-right: 1px solid #aaa;
+      border-bottom: 0;
+      font-weight: 700;
+      line-height: normal;
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+        border: none;
+      }
+      &:hover {
+        background: none;
+        color: #ccc;
+      }
+    }
+  }
+}
+// Theme modifications to Accordion
+.collapsible {
+  margin-bottom: 10px;
+  border: 0;
+  background:$body-bg;
+  @include box-shadow(none);
+}
+// Blue background with new "Font Icon"
+.collapse-title {
+  position: relative;
+  font-family: 'Poiret One', serif;
+  font-size: 23px;
+  color: #333;
+  background: #e4e8ea;
+  cursor: pointer;
+  padding: 15px 35px 15px 15px;
+  background-color: #547ffc;
+  color: white;
+  line-height: normal;
+  @include border-radius(5px);
+  @include transition(all 0.1s ease-in);
+  &:after {
+    font-family: 'icomoon';
+    content: "\e3b1";
+    position: absolute;
+    top: 32%;
+    right: 15px;
+    margin-left: 6px;
+    speak: none;
+    color: white;
+    font-size: 16px;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @include transition(all 0.1s ease-in);
+  }
+  &.collapsed {
+    background: #d4d7e1;
+    color: #333;
+    &:after {
+      content: "\e3b5";
+      color: #555;
+    }
+  }
+  &:hover {
+    background-color: #547ffc;
+    color: white;
+    &:after {
+      color: white;
+    }
+  }
+}
+// Smaller Accordion
+.collapse-title-2 {
+  @extend .collapse-title;
+  font-size:21px;
+  font-weight:bold;
+}
+// Collapsible area with $body-bg
+.collapsible-pane {
+  padding: 3px 15px 0 15px;
+  background: $body-bg;
+  font-family:'Marvel';
+  font-size:20px;
+  line-height:23px;
+  > * {
+    &:first-child {
+      margin-top: 0;
+      > *:first-child {
+        margin-top: 0;
+        > *:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+      > *:last-child {
+        margin-bottom: 0;
+        > *:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+// Font Family for Highlights on Features page
+.highlights{
+  margin-top:20px;
+  p{
+    font-family:"Marvel";
+    font-size:22px;
+  }
+  span{
+    font-family:"Marvel";
+  }
+}
+// Icon formatting on Main Icon Page
+.all-icons{
+  a{
+    color:#333;
+    @include transition(.5s);
+    display:inline-block;
+    span{
+      font-size:35px;
+      margin:10px;
+      line-height:45px;
+    }
+    i{
+      line-height:48px;
+      margin-top:10px;
+      font-size:35px;
+      padding:15px;
+    }
+    &:hover{
+      color:#547ffc;
+    }
+  }
+}
+// Massive Icon on 404.html
+.four-hundred-four{
+  padding-top:80px;
+  font-size:600px;
+  color:#c8c6c6;
+  text-align:center;
+}
+// Theme Blog Properties
+.blog{
+  margin-top:30px;
+  padding:15px;
+  .post{
+    .content{
+      h1{
+        font-family:"Poiret One";
+        font-size:32px;
+        color:#000;
+        font-weight:bold;
+        a{
+          color:#000;
+          @include transition(.3s);
+          &:hover{
+            color:#e4744f;
+          }
+        }
+      }
+      p{
+        font-family:"Marvel";
+        font-size:19px;
+        color:#333;
+        padding-bottom:5px !important;
+      }  
+    }
+    .quote{
+      h2{
+        padding-left:15px;
+        font-size:20px;
+        clear:both !important;
+      }
+      h3{
+        color:$light-theme-main;
+        font-size:16px;
+      }
+    }
+    // Author of Post (on left side)
+    .left-side{
+      margin-top:20px;
+      clear:both;
+      img{
+        @include border-radius(100%);
+        width:100px;
+      }
+      p{
+        width:100px;
+        text-align:center;
+        padding-left:8px;
+        font-family:"Marvel";
+        font-size:14px;
+        font-weight:bold;
+        color:$light-theme-main;
+      }
+      h3{
+        margin-top:14px;
+        padding-left:34px;
+        font-family:"Poiret One";
+        font-weight:bold;
+      }
+      h4{
+        margin:0;
+        padding-left:13px;
+        font-family:"Poiret One";
+        font-weight:bold;
+      }
+      @media (max-width: $screen-md) {
+        width:100% !important;
+        img,p,h3,h4{
+          margin-left:43%;
+        }
+      }
+      @media (max-width: $grid-float-breakpoint-max) {
+        width:100% !important;
+        img,p,h3,h4{
+          margin-left:38%;
+        }
+      }
+    }
+  }
+  .one-element{
+    img{
+      width:100%;
+    }
+    iframe{
+      width:100%;
+    }
+  }
+}
+// Right Sidebar containing all Blog Widgets
+.sidebar{
+  margin-top:15px;
+  h2{
+    margin-bottom:30px;
+    font-family:"Poiret One";
+    font-weight:bold;
+    padding-left:4px;
+    margin-top:30px;
+  }
+}
+// Bootstrap Nav-Tabs Reformated for Blog
+.blog-side-nav{
+  border-bottom: 0;
+  > li{
+    width:100%;
+    display:list-item;
+    clear:left;
+    > a{
+      background:#ddd;
+      padding:10px 14px ;
+      border:1px solid #e5e5e5;
+      @include border-radius(0);
+      font-size:18px;
+    }
+    &:first-child > a {
+      @include border-radius(4px 4px 0 0);
+    }
+    &:last-child > a {
+      @include border-radius(0 0 4px 4px);
+    }
+    > a:hover {
+      z-index: 2;
+      border-color: #666;
+    }
+  }
+}
+// Theme Blog Widget (with colored header)
+.blog-widget{
+  h2{
+    display:block;
+    text-align:left;
+    background:$light-theme-main;
+    color:white;
+    padding:7px 0 7px 10px;
+    margin-bottom:10px;
+    font-size:23px;
+    @include border-radius(5px 5px 0 0);
+  }
+  p{
+    padding-left:3px;
+    font-family:"Marvel";
+    font-size:15px;
+  }
+  ul{
+    margin-top:15px;
+  }
+  h3{
+    color:black;
+    font-family:"Marvel";
+    font-size:22px;
+    line-height:22px;
+    @include transition(.2s);
+    a{
+      &:hover{
+        color:$link-hover;
+      }
+    }
+  }
+  h4{
+    color:$light-theme-main;
+    font-family:"Marvel"; 
+    font-size:18px;
+    line-height:18px;
+  }
+}
+// Default Class Info for Contact Page
+.contact-info{
+  h3{
+    font-family:"Poiret One";
+    font-weight:bold;
+    color:$strong-color;
+  }
+  p{
+    font-family:"Marvel";
+    font-size:18px;
+  }
+  a{
+    color:#000;
+    @include transition(.7s);
+  }
+  form{
+    margin-left:-20px;
+    .right-inner-addon{
+      margin-bottom:10px;
+      input{
+        line-height:30px !important;
+        padding:10px;
+      }
+
+      i{
+        line-height:30px !important;
+        font-size:20px !important;
+      }
+    } 
+  }
+  .pager-2{
+    float:right !important;
+  }
+}
+// Theme Styling for input boxes on Contact Page
+.right-inner-addon {
+  position: relative;
+  input {
+    width: 100% !important;
+    padding: 5px;
+    border: solid #ccc 1px; 
+  }
+  textarea{
+    width:100%;
+    padding:15px 10px 120px 10px;
+    border: solid #ccc 1px;
+    @include border-radius(3px);
+  }
+  i {
+    color: #999;
+    position: absolute;
+    right: 0px;
+    padding: 10px 12px;
+    pointer-events: none;
+  }
+}
+// Nice Clean Footer with Icons
+.footer{
+  padding:30px 0;
+  margin-top:50px;
+  background:$bg-footer;
+  color:#fff;
+  h1 {
+    color:#fff;
+    font-family:"Actor";
+    font-size:25px;
+  }
+  p {
+    font-family:$font-family-sans-serif;
+    color:#ccc;
+    font-size:15px;
+  }
+  .head{
+    color:#fff;
+    line-height:30px;
+    display:inline;
+    float:left;
+    font-size:35px;
+    padding-top:10px;
+    padding-bottom:0;
+    margin:-10px 10px 0 -12px;
+  }    
+  .icon{
+    font-size:22px;
+    padding:5px 15px 0 5px;
+  }
+  .email{
+    font-family:"Actor";
+    font-size:16px;
+    color:$gray-light;
+    padding-top:5px;
+  }
+  .location{
+    @extend .email;
+    color:#ccc;
+  }
+  .twitter{
+    color:$gray-light;
+    strong{
+      color:#ccc;
+    }
+  }
+}
+// Social Icons for Footer (with variable colors)
+.social-icons {
+  a {
+    height: 36px;
+    padding: 10px;
+    float: left;
+    text-decoration: none;
+    display: block;
+    @include border-radius(2px);
+    @include transition(all 0.31s ease);
+    &:first-of-type {
+      margin-left: 0;
+    }
+    &:hover {
+    text-decoration: none;
+    }
+    &.facebook:hover {
+      background: #3b5996;
+    }
+    &.twitter:hover {
+      background: #00acee;
+    }
+    &.vimeo:hover, &.dribble:hover, &.youtube:hover {
+      background: #d53e68;
+    }
+    &.tumblr:hover {
+      background: #ff9933;
+    }
+    &.linkedin:hover {
+      background: #00ff33;
+    }
+    &.pinterest:hover {
+      background: #cb2027;
+    }
+    &.google:hover {
+      background: #c3391c;
+    }
+    &.linkedin:hover {
+      background: #009900;
+    }
+    &.pinterest:hover {
+      background: #990099;
+    }
+    &.rss:hover {
+      background: #f29a1d;
+    }
+    &.instagram:hover {
+      background: #457399;
+    }
+    &.other-social:hover {
+      background: #ff5d5e;
+    }
+  }
+  img {
+    opacity: 0.79;
+  }
+  i {
+    font-size: 18px;
+    color: #fff;
+    opacity: 0.95;
+  }
+}
+// Blank Screen with Loading.gif on Page Load
+#dvLoading{
+  background:#fff; 
+  position:fixed; 
+  height:2000px; 
+  width:2000px;; 
+  overflow:hidden; 
+  z-index:10000 !important;
+  top:0; 
+  left:0;
+  display:block;
+  img{
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    z-index:10001 !important;
+    left: 50%;
+    top: 50%;
+    margin: -25px 0 0 -25px;
+  }
+}
