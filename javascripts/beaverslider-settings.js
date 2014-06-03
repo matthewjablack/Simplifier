@@ -1,4 +1,5 @@
-$(document).ready(function(){
+var createSlider = function(){
+
   ////////////////////////////
   // Beaver Slider Settings //
   ////////////////////////////
@@ -43,4 +44,8 @@ $(document).ready(function(){
           changeMessagesAfter: 1
       }
   });  
-});
+  console.log(slider);
+};
+
+$(document).ready(createSlider);
+$(window).resize(createSlider);
