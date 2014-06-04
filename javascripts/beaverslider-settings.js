@@ -1,4 +1,6 @@
-var createSlider = function(){
+var createSlider = function(){$
+  $('#top-slider div').empty()
+
 
   ////////////////////////////
   // Beaver Slider Settings //
