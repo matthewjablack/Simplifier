@@ -1,5 +1,5 @@
 var createSlider = function(){$
-  $('#top-slider div').empty()
+  $('#top-slider div').empty();
 
 
   ////////////////////////////
